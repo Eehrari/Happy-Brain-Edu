@@ -1,0 +1,52 @@
+<h2>Subjects</h2>
+<a [routerLink]="['/subject-register']" style="float:right;" >
+
+  <p data-placement="top" data-toggle="tooltip" title="New Subject"><button type="button" class="btn btn-success btn-xs"  data-toggle="modal" >New Subject</button></p>
+</a>
+<div class="unit w-2-3">
+  <div class="hero-callout">
+
+    <table id="example" class="display compact cell-border" >
+      <thead>
+      <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Sections</th>
+        <th>Edit</th>
+        <th>Delete</th>
+
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let subject of subjects;let i=index;">
+        <!--<tr>-->
+        <td width="1%" align="center">{{i+1}}</td>
+        <td>{{subject.name}}</td>
+        <td>{{subject.description}}</td>
+        <td>{{subject.sections}}</td>
+
+
+        <td width="5%;" align="center">
+          <a [routerLink]="['/subject-edit', subject._id]" >
+            <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs"  data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p>
+          </a>
+
+        </td>
+        <td width="3%;" align="center">
+          <a [routerLink]="['/subject-list', subject._id]"  >
+
+            <p data-placement="top" data-toggle="tooltip" title="Delete"><button type="button" class="btn btn-danger btn-xs" (click)="deleteSubject(subject._id)" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p>
+          </a>
+
+        </td>
+      </tr>
+
+
+      </tbody>
+
+
+    </table>
+  </div>
+</div>

@@ -28,6 +28,9 @@ import { StudentListComponent } from './components/student/student-list/student-
 import { StudentEditComponent } from './components/student/student-edit/student-edit.component';
 import { MentorListComponent } from './components/mentor/mentor-list/mentor-list.component';
 import { MentorEditComponent } from './components/mentor/mentor-edit/mentor-edit.component';
+import { SubjectRegisterComponent } from './components/subjects/subject-register/subject-register.component';
+import { SubjectListComponent } from './components/subjects/subject-list/subject-list.component';
+import { SubjectEditComponent } from './components/subjects/subject-edit/subject-edit.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -46,6 +49,10 @@ const appRoutes: Routes = [
     {path: 'mentor-list', component: MentorListComponent, canActivate: [AuthGuard]},
     {path: 'mentor-list/:id', component: MentorListComponent, canActivate: [AuthGuard]},
     {path: 'mentor-edit/:id', component: MentorEditComponent, canActivate: [AuthGuard]},
+    {path: 'subject-edit/:id', component: SubjectEditComponent, canActivate: [AuthGuard]},
+    {path: 'subject-list/:id', component: SubjectListComponent, canActivate: [AuthGuard]},
+    {path: 'subject-list', component: SubjectListComponent, canActivate: [AuthGuard]},
+    {path: 'subject-register', component: SubjectRegisterComponent, canActivate: [AuthGuard]},
 ]
 
 @NgModule({
@@ -67,6 +74,9 @@ const appRoutes: Routes = [
         StudentEditComponent,
         MentorListComponent,
         MentorEditComponent,
+        SubjectRegisterComponent,
+        SubjectListComponent,
+        SubjectEditComponent,
 
     ],
     imports: [
