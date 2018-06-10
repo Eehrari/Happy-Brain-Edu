@@ -1,0 +1,91 @@
+<div>
+  <h2 class="page-header">Student Registration Form</h2>
+  <form (submit)="onRegisterSubmit()" >
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Type your name" id="name">
+    </div>
+    <div class="form-group">
+      <label for="email">EmailAddress</label>
+      <input type="email" [(ngModel)]="email" name="email"  class="form-control" placeholder="Type your email" id="email">
+    </div>
+    <div class="form-group">
+      <label class="text-capitalize">Password</label>
+      <input type="password" [(ngModel)]="password" name="password"  class="form-control" placeholder="Passwotrd">
+    </div>
+    <div class="form-group">
+      <label class="text-capitalize">Gender</label>
+      <div class="form-check">
+        <div class="radio">
+          <label for="radio4" class="form-check-label text-capitalize">
+            <input type="radio" [(ngModel)]="gender" name="gender"  id="radio4" value="Male" class="form-check-input">Male
+          </label>
+        </div>
+        <div class="radio">
+          <label for="radio5" class="form-check-label text-capitalize">
+            <input type="radio" [(ngModel)]="gender" name="gender"  id="radio5" value="Female" class="form-check-input">Female
+          </label >
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label class="text-capitalize">Phone number</label>
+      <input type="text" [(ngModel)]="phone" name="phone"  class="form-control" placeholder="Type your phone number">
+    </div>
+    <div class="form-group">
+      <label class="text-capitalize">Parent/Guardian's phone number</label>
+      <input type="text" [(ngModel)]="parents_phone" name="parents_phone" class="form-control" placeholder="Type the phone number">
+    </div>
+    <div class="form-group">
+      <label class="text-capitalize">Country of origin</label>
+      <input type="text" [(ngModel)]="country" name="country"  class="form-control" placeholder="Ccountry name">
+    </div>
+    <div class="form-group">
+      <label class="text-capitalize">Languages spoken</label>
+      <input type="text"  [(ngModel)]="language" name="language" class="form-control" placeholder="i.e. English, Spanish,...">
+    </div>
+    <div class="form-group">
+      <label class="text-capitalize">Current year level at school</label>
+      <input type="text"  [(ngModel)]="school_level" name="school_level" class="form-control" placeholder="Year level">
+    </div>
+    <div class="form-group">
+      <label class="text-capitalize">School name</label>
+      <input type="text"  [(ngModel)]="school_name" name="school_name" class="form-control" placeholder="Type your school name">
+    </div>
+    <div class="form-group">
+      <label class="text-capitalize">Current family situation</label>
+      <input type="text"   [(ngModel)]="family_situation" name="family_situation" class="form-control" placeholder="i.e. Living with parents,unaccompanied minor etc">
+    </div>
+    <div class="form-group">
+      <label class="text-capitalize">Level of english competency</label>
+      <input type="text"  [(ngModel)]="english_level" name="english_level" class="form-control" placeholder="Level">
+    </div>
+    <div class="form-group">
+      <label class="text-capitalize">Preferred gender of tutor</label>
+      <div class="form-check">
+        <div class="radio">
+          <label for="radio1" class="form-check-label text-capitalize">
+            <input type="radio"  [(ngModel)]="tutor_gender" name="tutor_gender" id="radio1" value="Male" class="form-check-input">Male
+          </label>
+        </div>
+        <div class="radio">
+          <label for="radio2" class="form-check-label text-capitalize">
+            <input type="radio" [(ngModel)]="tutor_gender" name="tutor_gender" id="radio2" value="Female" class="form-check-input">Female
+          </label >
+        </div>
+        <div class="radio">
+          <label for="radio3" class="form-check-label text-capitalize ">
+            <input type="radio" [(ngModel)]="tutor_gender" name="tutor_gender" id="radio3" name="radios" value="No Preference" class="form-check-input">No Preference
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Submit">
+
+  </form>
+</div>

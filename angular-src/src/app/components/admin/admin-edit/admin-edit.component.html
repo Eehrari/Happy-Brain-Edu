@@ -1,0 +1,20 @@
+
+<h2 class="page-header" >Edit Admin</h2>
+
+<form class="form-signin" (submit)="updateAdmin(admin._id)" #formList="ngForm">
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter name" [(ngModel)]="admin.name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" id="email" placeholder="Enter email" [(ngModel)]="admin.email" name="email">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" class="form-control" placeholder=" Enter Password" [(ngModel)]="admin.password" name="password">
+  </div>
+
+  <input class="btn btn-lg btn-primary" type="submit" value="Save">
+</form>

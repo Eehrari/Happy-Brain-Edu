@@ -1,0 +1,143 @@
+<div>
+  <h2 class="page-header">Edit Mentor</h2>
+  <form (submit)="updateMentor(mentor._id)">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" [(ngModel)]="mentor.name" name="name" class="form-control" id="name" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="text" [(ngModel)]="mentor.email" name="email" class="form-control" id="email"
+             placeholder="Enter email address">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" [(ngModel)]="mentor.password" name="password" class="form-control" id="password"
+             placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="text" [(ngModel)]="mentor.phone" name="phone" class="form-control" id="phone"
+             placeholder="Enter phone number">
+    </div>
+
+
+    <div class="form-group">
+      <label>Gender</label>
+      <div class="form-check">
+        <div class="radio">
+          <label for="male" class="form-check-label text-capitalize">
+            <input type="radio" [(ngModel)]="mentor.gender" id="male" name="male" value="male"
+                   class="form-check-input">Male
+          </label>
+        </div>
+        <div class="radio">
+          <label for="female" class="form-check-label text-capitalize">
+            <input type="radio" [(ngModel)]="mentor.gender" id="female" name="female" value="female"
+                   class="form-check-input">Female
+          </label>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="form-group">
+      <label for="language">Languages Spoken</label>
+      <input type="text" [(ngModel)]="mentor.language" name="language" class="form-control" id="language"
+             placeholder="Enter languages">
+    </div>
+    <div class="form-group">
+      <label for="location">Location (Please include how far you are willing to travel and whether you have access
+        to a mode of transport (car, bike, public transport)).</label>
+      <input type="text" [(ngModel)]="mentor.location" name="location" class="form-control" id="location"
+             placeholder="e.g. home/library/school...(with full address)">
+    </div>
+    <div class="form-group">
+      <label for="vce_subjects">Which subjects did you study in VCE? What were your study scores for these subjects?
+        (skip if the question is not relevant to you)</label>
+      <input type="text" [(ngModel)]="mentor.vce_subjects" name="vce_subjects" class="form-control" id="vce_subjects"
+             placeholder="Math,chemestry,physics...">
+    </div>
+
+
+    <div class="form-group">
+      <label for="studying">Are you currently studying? If so, what are you studying? If not, what are your plans
+        for 2018?</label>
+      <input type="text" [(ngModel)]="mentor.studying" name="studying" class="form-control" id="studying"
+             placeholder="Your answer">
+    </div>
+    <div class="form-group">
+      <label for="experience">Do you have any tutoring or mentoring experience? Please elaborate.</label>
+      <input type="text" [(ngModel)]="mentor.experience" name="experience" class="form-control" id="experience"
+             placeholder=" Your experience">
+    </div>
+
+    <div class="form-group">
+      <label for="volunteering">Do you have any other experience in volunteering or community work?</label>
+      <input type="text" [(ngModel)]="mentor.volunteering" name="volunteering" class="form-control" id="volunteering"
+             placeholder=" Your answer">
+    </div>
+
+
+    <div class="form-group">
+      <label>Do You Have A Working With Children Check?</label>
+      <div class="form-check">
+        <div class="radio">
+          <label for="yes" class="form-check-label text-capitalize">
+            <input type="radio" [(ngModel)]="mentor.wwcc" name="wwcc" class="form-control" id="yes" value="yes"
+                   class="form-check-input">Yes
+          </label>
+        </div>
+        <div class="radio">
+          <label for="no" class="form-check-label text-capitalize">
+            <input type="radio" [(ngModel)]="mentor.wwcc" name="wwcc" class="form-control" id="no" value="no"
+                   class="form-check-input">No
+          </label>
+        </div>
+        <div class="radio">
+          <label for="other" class="form-check-label text-capitalize">
+            <input type="radio" [(ngModel)]="mentor.wwcc" name="wwcc" class="form-control" id="other"
+                   value="in the process of obtaining one" class="form-check-input">In the process of
+            obtaining one
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="why_join">Why do you want to join this program? (100-200 words)</label>
+      <input type="text" [(ngModel)]="mentor.why_join" name="why_join" class="form-control" id="why_join"
+             placeholder="Your answer">
+    </div>
+
+    <div class="form-group">
+      <label for="about_us">Where did you hear about us?</label>
+      <input type="text" [(ngModel)]="mentor.about_us" name="about_us" class="form-control" id="about_us"
+             placeholder="Your answer">
+    </div>
+
+    <div class="form-group">
+      <label for="password">What does the term 'refugee' mean to you? (100-200 words)</label>
+      <input type="text" [(ngModel)]="mentor.refugee_definition" name="refugee_definition" class="form-control"
+             id="refugee_definition" placeholder="Your answer">
+    </div>
+
+    <div class="form-group">
+      <label for="preference">Do you have any special preferences with regards to students? (e.g. 'not willing to
+        mentor VCE level students')</label>
+      <input type="text" [(ngModel)]="mentor.preference" name="preference" class="form-control" id="preference"
+             placeholder="Your answer">
+    </div>
+
+    <div class="form-group .form-inline">
+      <form class="form-inline">
+        <input type="checkbox" [(ngModel)]="mentor.send_me_copy" name="send_me_copy" class="form-control"
+               id="send_me_copy">
+        <label for="send_me_copy">&emsp;Send Me A Copy Of My Responses. </label>
+      </form>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit">
+  </form>
+</div>

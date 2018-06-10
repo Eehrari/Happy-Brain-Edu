@@ -1,0 +1,55 @@
+<div class="unit w-2-3">
+  <div class="hero-callout">
+    <table id="example" class="display compact cell-border" >
+      <thead>
+      <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Gender</th>
+        <th>Status</th>
+        <th>Edit</th>
+        <th>Delete</th>
+
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let mentor of mentors;let i=index;">
+        <!--<tr>-->
+        <td width="1%" align="center">{{i+1}}</td>
+        <td>{{mentor.name}}</td>
+        <td>{{mentor.email}}</td>
+        <td>{{mentor.phone}}</td>
+        <td>{{mentor.gender}}</td>
+        <td>{{mentor.status}}</td>
+        <!--<td>{{admin.name}}</td>-->
+        <!--<td>{{photo.title}}</td>-->
+        <!--<td>{{photo.title}}</td>-->
+        <!--<td>{{photo.title}}</td>-->
+        <!--<td>{{photo.fileUplaod}}</td>-->
+        <!--<td><img src="./uploads/1526365516327.Wallpaper%20(484).jpg"></td>-->
+
+        <td width="5%;" align="center">
+          <a [routerLink]="['/mentor-edit', mentor._id]" >
+            <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs"  data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p>
+          </a>
+
+        </td>
+        <td width="5%;" align="center">
+          <a [routerLink]="['/mentor-list', mentor._id]"  >
+
+            <p data-placement="top" data-toggle="tooltip" title="Delete"><button type="button" class="btn btn-danger btn-xs" (click)="deleteMentor(mentor._id)" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p>
+          </a>
+
+        </td>
+      </tr>
+
+
+      </tbody>
+
+
+    </table>
+  </div>
+</div>
