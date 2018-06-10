@@ -22,6 +22,7 @@ const app = express();
 const admins = require('./routes/admins');
 const students = require('./routes/students');
 const mentors = require('./routes/mentors');
+const subjects = require('./routes/subjects');
 
 const port = 3000;
 //Cors middleware
@@ -42,6 +43,9 @@ require('./config/passport')(passport);
 app.use('/admins',admins);
 app.use('/students',students);
 app.use('/mentors',mentors);
+
+//Subjects routes
+app.use('/subjects', subjects);
 
 //index routes
 app.get('/',function (req,res) {
