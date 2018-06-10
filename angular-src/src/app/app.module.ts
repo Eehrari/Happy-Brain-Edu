@@ -28,7 +28,6 @@ import { StudentListComponent } from './components/student/student-list/student-
 import { StudentEditComponent } from './components/student/student-edit/student-edit.component';
 import { MentorListComponent } from './components/mentor/mentor-list/mentor-list.component';
 import { MentorEditComponent } from './components/mentor/mentor-edit/mentor-edit.component';
-import { TestComponent } from './components/test/test.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -68,7 +67,7 @@ const appRoutes: Routes = [
         StudentEditComponent,
         MentorListComponent,
         MentorEditComponent,
-        TestComponent
+
     ],
     imports: [
         BrowserModule,
