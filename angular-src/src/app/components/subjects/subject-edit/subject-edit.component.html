@@ -1,0 +1,20 @@
+
+<h2 class="page-header" >Edit Subjet</h2>
+
+<form class="form-signin" (submit)="updateSubject(subject._id)" #formList="ngForm">
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="subject.name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" id="description" [(ngModel)]="subject.description" name="description">
+  </div>
+  <div class="form-group">
+    <label for="sections">Sections</label>
+    <input type="text" id="sections" class="form-control" [(ngModel)]="subject.sections" name="sections">
+  </div>
+
+  <input class="btn btn-lg btn-primary" type="submit" value="Save">
+</form>
