@@ -31,6 +31,12 @@ import { MentorEditComponent } from './components/mentor/mentor-edit/mentor-edit
 import { SubjectRegisterComponent } from './components/subjects/subject-register/subject-register.component';
 import { SubjectListComponent } from './components/subjects/subject-list/subject-list.component';
 import { SubjectEditComponent } from './components/subjects/subject-edit/subject-edit.component';
+import { OnlineRegisterComponent } from './components/resources/online/online-register/online-register.component';
+import { OnlineEditComponent } from './components/resources/online/online-edit/online-edit.component';
+import { OnlineListComponent } from './components/resources/online/online-list/online-list.component';
+import { LocalRegisterComponent } from './components/resources/local/local-register/local-register.component';
+import { LocalEditComponent } from './components/resources/local/local-edit/local-edit.component';
+import { LocalListComponent } from './components/resources/local/local-list/local-list.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -53,6 +59,14 @@ const appRoutes: Routes = [
     {path: 'subject-list/:id', component: SubjectListComponent, canActivate: [AuthGuard]},
     {path: 'subject-list', component: SubjectListComponent, canActivate: [AuthGuard]},
     {path: 'subject-register', component: SubjectRegisterComponent, canActivate: [AuthGuard]},
+    {path: 'online-register', component: OnlineRegisterComponent, canActivate: [AuthGuard]},
+    {path: 'online-edit/:id', component: OnlineEditComponent, canActivate: [AuthGuard]},
+    {path: 'online-list/:id', component: OnlineListComponent, canActivate: [AuthGuard]},
+    {path: 'online-list', component: OnlineListComponent, canActivate: [AuthGuard]},
+    {path: 'local-register', component: LocalRegisterComponent, canActivate: [AuthGuard]},
+    {path: 'local-edit/:id', component: LocalEditComponent, canActivate: [AuthGuard]},
+    {path: 'local-list/:id', component: LocalListComponent, canActivate: [AuthGuard]},
+    {path: 'local-list', component: LocalListComponent, canActivate: [AuthGuard]},
 ]
 
 @NgModule({
@@ -77,6 +91,12 @@ const appRoutes: Routes = [
         SubjectRegisterComponent,
         SubjectListComponent,
         SubjectEditComponent,
+        OnlineRegisterComponent,
+        OnlineEditComponent,
+        OnlineListComponent,
+        LocalRegisterComponent,
+        LocalEditComponent,
+        LocalListComponent,
 
     ],
     imports: [

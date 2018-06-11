@@ -1,0 +1,26 @@
+<h2 class="page-header" >Add Online Resource</h2>
+
+<form class="form-signin" (submit)="onRegisterSubmit(formList)" #formList="ngForm">
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" placeholder="Enter title" [(ngModel)]="title" name="title">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" id="description" placeholder="Enter description" [(ngModel)]="description" name="description">
+  </div>
+  <div class="form-group">
+    <label>Subject</label>
+    <select name="subject" id="subject" [(ngModel)]="subject" class="form-control">
+      <option>Select subject!</option>
+      <option *ngFor="let subject of subjects" [ngValue]="subject.name">{{subject.name}}</option>
+
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="link">Link</label>
+    <input type="url" class="form-control" id="link" placeholder="Enter the link" [(ngModel)]="link" name="link">
+  </div>
+  <input class="btn btn-lg btn-primary" type="submit" value="Register">
+</form>
