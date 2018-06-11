@@ -23,6 +23,7 @@ const admins = require('./routes/admins');
 const students = require('./routes/students');
 const mentors = require('./routes/mentors');
 const subjects = require('./routes/subjects');
+const online_resources = require('./routes/onlines');
 
 const port = 3000;
 //Cors middleware
@@ -46,6 +47,8 @@ app.use('/mentors',mentors);
 
 //Subjects routes
 app.use('/subjects', subjects);
+
+app.use('/online-res', online_resources);
 
 //index routes
 app.get('/',function (req,res) {

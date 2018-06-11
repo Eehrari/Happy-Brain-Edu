@@ -1,25 +1,31 @@
 <div class="col-sm-3 col-md-2 sidebar">
-<ul class="nav nav-sidebar" >
-  <li><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-  <li><a href="#">Reports</a></li>
-  <li><a href="#">Analytics</a></li>
-  <li><a href="#">Export</a></li>
-</ul>
-<ul class="nav nav-sidebar" >
-  <li><a href="">Nav item</a></li>
-  <li><a href="">Nav item again</a></li>
-  <li><a href="">One more nav</a></li>
-  <li><a href="">Another nav item</a></li>
-  <li><a href="">More navigation</a></li>
-</ul>
-<ul class="nav nav-sidebar">
-  <li><a [routerLink]="['/subject-list']">Subjects</a></li>
-    <li>User Management
-        <ul>
-          <li><a [routerLink]="['/admin-list']">Admins</a></li>
-          <li><a [routerLink]="['/student-list']">Students</a></li>
-          <li><a [routerLink]="['/mentor-list']">Mentors</a></li>
-        </ul>
-    </li>
-</ul>
+    <ul class="nav nav-sidebar">
+        <li><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Analytics</a></li>
+        <li><a href="#">Export</a></li>
+    </ul>
+    <ul class="nav nav-sidebar">
+        <li><a href="">Nav item</a></li>
+        <li><a href="">Nav item again</a></li>
+        <li><a href="">One more nav</a></li>
+        <li><a href="">Another nav item</a></li>
+        <li><a href="">More navigation</a></li>
+    </ul>
+    <ul class="nav nav-sidebar">
+        <li><a [routerLink]="['/subject-list']">Subjects</a></li>
+        <li>User Management
+            <ul>
+                <li><a [routerLink]="['/admin-list']">Admins</a></li>
+                <li><a [routerLink]="['/student-list']">Students</a></li>
+                <li><a [routerLink]="['/mentor-list']">Mentors</a></li>
+            </ul>
+        </li>
+        <li>Resources
+            <ul>
+                <li><a [routerLink]="['/local-resources']">Local</a></li>
+                <li><a [routerLink]="['/online-list']">Online</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>

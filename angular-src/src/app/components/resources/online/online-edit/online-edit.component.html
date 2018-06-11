@@ -1,0 +1,28 @@
+
+<h2 class="page-header" >Edit Subjet</h2>
+
+<form class="form-signin" (submit)="updateOnlineRes(onlineRes._id)" #formList="ngForm">
+
+  <div class="form-group">
+    <label for="title">Name</label>
+    <input type="text" class="form-control" id="title" [(ngModel)]="onlineRes.title" name="title">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" id="description" [(ngModel)]="onlineRes.description" name="description">
+  </div>
+  <div class="form-group">
+    <label>Subject</label>
+    <select name="subject" id="subject" [(ngModel)]="onlineRes.subject" class="form-control">
+      <option>Select subject!</option>
+      <option *ngFor="let subject of subjects" [ngValue]="subject.name">{{subject.name}}</option>
+
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="link">Link</label>
+    <input type="text" id="link" class="form-control" [(ngModel)]="onlineRes.link" name="link">
+  </div>
+
+  <input class="btn btn-lg btn-primary" type="submit" value="Save">
+</form>

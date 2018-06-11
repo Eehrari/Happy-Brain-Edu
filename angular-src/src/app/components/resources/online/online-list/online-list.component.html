@@ -1,0 +1,54 @@
+<h2>Subjects</h2>
+<a [routerLink]="['/online-register']" style="float:right;" >
+
+  <p data-placement="top" data-toggle="tooltip" title="New Resource"><button type="button" class="btn btn-success btn-xs"  data-toggle="modal" >New Resource</button></p>
+</a>
+<div class="unit w-2-3">
+  <div class="hero-callout">
+
+    <table id="example" class="display compact cell-border" >
+      <thead>
+      <tr>
+        <th>No.</th>
+        <th>Subject</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Link</th>
+        <th>Edit</th>
+        <th>Delete</th>
+
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let resource of resources;let i=index;">
+        <!--<tr>-->
+        <td width="1%" align="center">{{i+1}}</td>
+        <td>{{resource.subject}}</td>
+        <td>{{resource.title}}</td>
+        <td>{{resource.description}}</td>
+        <td>{{resource.link}}</td>
+
+
+        <td width="5%;" align="center">
+          <a [routerLink]="['/online-edit', resource._id]" >
+            <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs"  data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p>
+          </a>
+
+        </td>
+        <td width="3%;" align="center">
+          <a [routerLink]="['/online-list', resource._id]"  >
+
+            <p data-placement="top" data-toggle="tooltip" title="Delete"><button type="button" class="btn btn-danger btn-xs" (click)="deleteRes(resource._id)" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p>
+          </a>
+
+        </td>
+      </tr>
+
+
+      </tbody>
+
+
+    </table>
+  </div>
+</div>
