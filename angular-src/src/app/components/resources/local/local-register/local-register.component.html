@@ -1,3 +1,130 @@
-<p>
-  local-register works!
-</p>
+<!--<div class="container-fluid">-->
+  <!--<div class="row header-section">-->
+    <!--<span>Angular 4/5 Nodejs File Upload Download Sample</span>-->
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <!--<div class="col-md-2"></div>-->
+    <!--<div class="col-md-8">-->
+      <!--<div class="row card">-->
+        <!--<div class="col-sm-12">-->
+          <!--<h4>Upload Section</h4>-->
+          <!--<div id="fileSelector">-->
+            <!--<input type="file" name="fileUplaod" id="fileUpload"-->
+                   <!--multiple ng2FileSelect [uploader]="uploader">-->
+          <!--</div>-->
+          <!--<div>-->
+            <!--<div class="row uploadList" *ngFor="let item of uploader.queue">-->
+              <!--<div class="col-sm-4">{{item.file.name}}</div>-->
+              <!--<div class="col-sm-4">-->
+                <!--<div class="progress">-->
+                  <!--<div class="progress-bar bg-success"-->
+                       <!--[ngStyle]="{'width':item.progress+'%'}"></div>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col-sm-4">-->
+                <!--<button type="button" class="btn btn-dark" (click)="item.upload()">Upload</button>-->
+                <!--<button type="button" class="btn btn-danger" (click)="item.remove()">Cancel</button>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="row" *ngIf="uploader?.queue?.length > 0">-->
+            <!--<button type="button" class="btn btn-primary" (click)="uploader.uploadAll()">Upload All</button>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="row card">-->
+        <!--<h4>Download Section</h4>-->
+
+        <!--<div class="row" *ngFor="let item of attachmentList; let i = index"-->
+             <!--style="margin:10px;padding:5px;background-color:rgb(231, 229, 229); border-radius:5px; line-height:40px;">-->
+          <!--<div class="col-sm-7">{{item.originalname}}</div>-->
+          <!--<div class="col-sm-5" style="text-align:center;"><button type="button" class="btn btn-primary" (click)="download(i)">Download</button></div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-2"></div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+
+<h2 class="page-header" >Add Local Resources</h2>
+
+<form enctype="multipart/form-data" class="form-signin" (submit)="onRegisterSubmit(formList)" #formList="ngForm">
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" placeholder="Enter title" [(ngModel)]="title" name="title">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" id="description" placeholder="Enter description" [(ngModel)]="description" name="description">
+  </div>
+  <div class="form-group">
+    <label>Subject</label>
+    <select name="subject" id="subject" [(ngModel)]="subject" class="form-control">
+      <option>Select subject!</option>
+      <option *ngFor="let subject of subjects" [ngValue]="subject.name">{{subject.name}}</option>
+
+    </select>
+  </div>
+  <div class="form-group" >
+    <label >File</label>
+    <!--<input type="file" class="form-control" id="file" [(ngModel)]="filename" name="filename">-->
+
+
+    <!--<div class="row">-->
+      <!--<div class="col-md-12">-->
+        <!--<div class="row card">-->
+          <div >
+            <!--<h4>Upload Section</h4>-->
+            <div id="fileSelector">
+              <input type="file" class="form-control"  name="fileUplaod" id="fileUpload"
+                      ng2FileSelect [uploader]="uploader">
+            </div>
+            <div>
+              <div class="row uploadList" *ngFor="let item of uploader.queue">
+                <div class="col-sm-4">{{item.file.name}}</div>
+                <div class="col-sm-4">
+                  <div class="progress">
+                    <div class="progress-bar bg-success"
+                         [ngStyle]="{'width':item.progress+'%'}"></div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <button type="button" class="btn btn-dark" (click)="item.upload()">Upload</button>
+                  <button type="button" class="btn btn-danger" (click)="item.remove()">Cancel</button>
+                </div>
+              </div>
+            </div>
+            <!--<div class="row col-sm-10 " *ngIf="uploader?.queue?.length > 0">-->
+              <!--<button type="button" class="btn btn-primary" (click)="uploader.uploadAll()" style="float: right">Upload All</button>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="row card">-->
+          <!--<h4>Download Section</h4>-->
+
+          <!--<div class="row" *ngFor="let item of attachmentList; let i = index"-->
+               <!--style="margin:10px;padding:5px;background-color:rgb(231, 229, 229); border-radius:5px; line-height:40px;">-->
+            <!--<div class="col-sm-7">{{item.originalname}}</div>-->
+            <!--<div class="col-sm-5" style="text-align:center;"><button type="button" class="btn btn-primary" (click)="download(i)">Download</button></div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <div class="col-md-2"></div>
+    </div>
+
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <input class="btn btn-lg btn-primary" style="display:block" type="submit" value="Register">
+
+</form>
+
+

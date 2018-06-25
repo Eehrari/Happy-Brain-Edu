@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
-import {MatTableModule, MatPaginatorModule, MatSortModule, MatButtonModule, MatCheckboxModule} from "@angular/material";
+import {MatTableModule, MatPaginatorModule, MatSortModule, MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {LoginComponent} from './components/login/login.component';
@@ -14,14 +14,14 @@ import {ValidateService} from './services/validate.service';
 import {AuthService} from './services/auth.service';
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {AuthGuard} from './guards/auth.guard';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
 import { StudentRegisterComponent } from './components/student/register/student-register/student-register.component';
 import { MentorRegisterComponent } from './components/mentor/register/mentor-register/mentor-register.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { DataTableComponent } from './data-table/data-table.component';
-import {AdminRegisterComponent} from "./components/admin/admin-register/admin-register.component";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {AdminRegisterComponent} from './components/admin/admin-register/admin-register.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AdminListComponent } from './components/admin/admin-list/admin-list.component';
 import { AdminEditComponent } from './components/admin/admin-edit/admin-edit.component';
 import { StudentListComponent } from './components/student/student-list/student-list.component';
@@ -37,6 +37,7 @@ import { OnlineListComponent } from './components/resources/online/online-list/o
 import { LocalRegisterComponent } from './components/resources/local/local-register/local-register.component';
 import { LocalEditComponent } from './components/resources/local/local-edit/local-edit.component';
 import { LocalListComponent } from './components/resources/local/local-list/local-list.component';
+import {FileUploadModule} from 'ng2-file-upload';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -111,7 +112,7 @@ const appRoutes: Routes = [
         MatButtonModule,
         MatCheckboxModule,
         BrowserAnimationsModule,
-
+        FileUploadModule
 
     ],
     providers: [ValidateService, AuthService, AuthGuard],
