@@ -24,6 +24,7 @@ const students = require('./routes/students');
 const mentors = require('./routes/mentors');
 const subjects = require('./routes/subjects');
 const online_resources = require('./routes/onlines');
+const local_resources = require('./routes/locals');
 
 const port = 3000;
 //Cors middleware
@@ -49,6 +50,7 @@ app.use('/mentors',mentors);
 app.use('/subjects', subjects);
 
 app.use('/online-res', online_resources);
+app.use('/local-res', local_resources);
 
 //index routes
 app.get('/',function (req,res) {
