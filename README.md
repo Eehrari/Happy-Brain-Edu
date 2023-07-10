@@ -1,12 +1,11 @@
-# MEANauthapp
+# Happy Brain
 
 Complete MEAN stack application with authentication using json web tokens
 
 ### Version
-1.0.0
+1.3.1
 
-## Usage
-
+ 
 
 ### Installation
 
@@ -21,4 +20,4 @@ Run app
 $ npm start
 ```
 
-### Screenshots in Wiki: https://github.com/tomcatbuzz/meanauthapp/wiki
+ 
